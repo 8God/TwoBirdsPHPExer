@@ -1,13 +1,14 @@
 <?php
-  $x=60;
-  $y=40;
+$x = 60;
+$y = 40;
 
-  function addition() {
-  $GLOBALS['z'] =  $GLOBALS['x'] + $GLOBALS['y'];
-  }
+function addition()
+{
+    $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+}
 
-  addition();
-  echo "the result is ";
-  echo $z;
+addition();
+echo "the result is ";
+echo $z;
 
  ?>
