@@ -61,14 +61,22 @@ function getValue($data)
 
 <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     Name :
-    <input type="text" name="user_name"><span class="error">* <?php echo $nameErr; ?></span><br>
+    <input type="text" name="user_name" value="<?php echo $name ?>"><span class="error">* <?php echo $nameErr; ?></span><br>
     Age :
-    <input type="text" name="user_age"><span class="error">* <?php echo $ageErr; ?></span><br>
+    <input type="text" name="user_age" value="<?php echo $age ?>"><span
+            class="error">* <?php echo $ageErr; ?></span><br>
     Phone Number :
-    <input type="text" name="user_phone_num"><span class="error">* <?php echo $phoneNumErr; ?></span><br>
+    <input type="text" name="user_phone_num" value="<?php echo $phoneNum ?>"><span
+            class="error">* <?php echo $phoneNumErr; ?></span><br>
     gender:
-    <input type="radio" name="gender" value="male"> male
-    <input type="radio" name="gender" value="female"> female
+    <input type="radio" name="gender" value="male"
+        <?php if (isset($gender) && $gender == 'male') {
+            echo 'checked';
+        } ?>> male
+    <input type="radio" name="gender" value="female"
+        <?php if (isset($gender) && $gender == 'female') {
+            echo 'checked';
+        } ?>> female
     <span class="error">*<?php echo $genderErr ?></span><br>
 
     <input type="submit" name="submit" value="submit">
