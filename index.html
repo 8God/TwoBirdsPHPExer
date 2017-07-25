@@ -4,40 +4,76 @@
 <head>
     <title>TwoBirds PHP Exer</title>
     <link type="text/css" rel="stylesheet" href="./css/fold_list.css"/>
+    <script type="text/javascript">
+        var isShowBaseList = false;
+        var isShowPostList = false;
+        var isShowAdvancedList = false;
+        var isShowFileList = false;
+
+        function showList(listName) {
+            var isShowList = false;
+            switch (listName) {
+                case 'baseList':
+                    isShowList = isShowBaseList;
+                    isShowBaseList = !isShowBaseList;
+                    break;
+                case 'postList':
+                    isShowList = isShowPostList;
+                    isShowPostList = !isShowPostList;
+                    break;
+                case 'advancedList':
+                    isShowList = isShowAdvancedList;
+                    isShowAdvancedList = !isShowAdvancedList;
+                    break;
+                case 'fileList':
+                    isShowList = isShowFileList;
+                    isShowFileList = !isShowFileList;
+                    break;
+            }
+            if (!isShowList) {
+                document.getElementById(listName).style.display = "block";
+            } else {
+                document.getElementById(listName).style.display = "none";
+            }
+        }
+
+    </script>
 </head>
 
 <body>
 
-<h1 style="color: #248888;">TwoBirds PHP Exer</h1>
+<h1 style="color: #248888;margin: 16px;">TwoBirds PHP Exer</h1>
 <ul id="parent">
 
     <li>
-        <span><p></p>Base</span>
-        <ul>
+        <span onclick="showList('baseList')"><p></p>Base</span>
+        <ul id="baseList">
             <li><a href="./application/base/phpinfo.php">phpinfo</a></li>
             <li><a href="./application/base/hyper_global_variable_test.php">hyper_global_variable_test</a></li>
 
         </ul>
     </li>
     <li>
-        <span><p></p>Post</span>
-        <ul>
-            <li><a href="./application/form_exer/post_exer_login.html">post exer login</a></li>
-            <li><a href="./application/form_exer/form_check_empty.php">check user info is empty</a></li>
+        <span onclick="showList('postList')"><p></p>Post</span>
+        <ul id="postList">
+            <li><a href="application/post/post_exer_login.html">post exer login</a></li>
+            <li><a href="application/post/form_check_empty.php">check user info is empty</a></li>
         </ul>
     </li>
     <li>
-        <span><p></p>Array</span>
-        <ul>
+        <span onclick="showList('advancedList')"><p></p>Advanced</span>
+        <ul id="advancedList">
             <li><a href="application/advanced/two_dimenational_array.php">two_dimenational_array</a></li>
+            <li><a href="application/advanced/date_exer.php">date exer</a></li>
 
         </ul>
     </li>
     <li>
-        <span><p></p>File</span>
-        <ul>
-            <li><a href="application/advanced/read_file_exer.php">read_file_exer</a></li>
-            <li><a href="application/advanced/write_files.php">write_files</a></li>
+        <span onclick="showList('fileList')"><p></p>File</span>
+        <ul id="fileList">
+            <li><a href="application/file/read_file_exer.php">read_file_exer</a></li>
+            <li><a href="application/file/write_files.php">write_files</a></li>
+            <li><a href="application/file/upload_file.html">upload_file</a></li>
         </ul>
     </li>
 </ul>

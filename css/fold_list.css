@@ -30,6 +30,7 @@ li p {
 
 li > ul {
     display: none;
+    padding-left: 20px;
 }
 
 li > ul > li {
