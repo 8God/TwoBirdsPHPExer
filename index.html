@@ -9,6 +9,7 @@
         var isShowPostList = false;
         var isShowAdvancedList = false;
         var isShowFileList = false;
+        var isShowDBList = false;
 
         function showList(listName) {
             var isShowList = false;
@@ -28,6 +29,10 @@
                 case 'fileList':
                     isShowList = isShowFileList;
                     isShowFileList = !isShowFileList;
+                    break;
+                case 'dbList':
+                    isShowList = isShowDBList;
+                    isShowDBList = !isShowDBList;
                     break;
             }
             if (!isShowList) {
@@ -65,6 +70,10 @@
         <ul id="advancedList">
             <li><a href="application/advanced/two_dimenational_array.php">two_dimenational_array</a></li>
             <li><a href="application/advanced/date_exer.php">date exer</a></li>
+            <li><a href="application/advanced/mail_exer.php">mail_exer</a></li>
+            <li><a href="application/advanced/error_exer.php">error_exer</a></li>
+            <li><a href="application/advanced/exception_exer.php">exception_exer</a></li>
+            <li><a href="application/advanced/filter_exer.php">filter_exer</a></li>
 
         </ul>
     </li>
@@ -74,6 +83,15 @@
             <li><a href="application/file/read_file_exer.php">read_file_exer</a></li>
             <li><a href="application/file/write_files.php">write_files</a></li>
             <li><a href="application/file/upload_file.html">upload_file</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <span onclick="showList('dbList')"><p></p>Database</span>
+        <ul id="dbList">
+            <li><a href="application/database/mysql_create_and_close.php">mysql_create_and_close</a></li>
+            <li><a href="application/database/mysql_create_table.php">mysql_create_table</a></li>
+
         </ul>
     </li>
 </ul>
