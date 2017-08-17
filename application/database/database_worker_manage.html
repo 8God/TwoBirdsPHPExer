@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Worker Manage</title>
+</head>
+<body>
+
+<form method="post" action="worker_manage.php" style="padding: 30px">
+    Operation：
+    <input type="radio" value="insert" name="operation">insert
+    <input type="radio" value="delete" name="operation">delete
+    <input type="radio" value="update" name="operation">update
+    <input type="radio" value="select" name="operation" checked>select
+    <br>
+    Name：<input type="text" name="name"><br>
+    Age：<input type="number" name="age"><br>
+    Mobile：<input type="text" name="mobile"><br>
+    <input type="submit" name="submit" value="submit" style="width: 200px;"><br>
+</form>
+
+</body>
+</html>

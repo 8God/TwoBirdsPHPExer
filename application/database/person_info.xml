@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<from>
+    <name>Peter</name>
+    <age>18</age>
+    <mobile>18999999999</mobile>
+    <sex>mail</sex>
+    <moreinfo>
+        <city>New York</city>
+        <introduce>I am a student.</introduce>
+    </moreinfo>
+</from>
